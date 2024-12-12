@@ -1,122 +1,46 @@
 ---
 layout: default
+title: Envoy Project
+is_index: true
 ---
+# Open Source Tools
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+## Envoy Proxy
+Envoy Proxy is an edge and service proxy, designed for cloud-native applications. Providing powerful traffic management, routing, observability, and extensibility features.
 
-[Link to another page](./another-page.html).
+Take control over your traffic.
+<div>
+        <a href="https://envoyproxy.io" class="btn">Learn More</a>
+</div>
 
-There should be whitespace between paragraphs.
+## Envoy Gateway
+Envoy Gateway manages Envoy Proxy as a Standalone or Kubernetes-based API Gateway, implementing and extending the Kubernetes Gateway API.
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+Aimed at making it easy to adopt, use, and manage Envoy Proxy.
+<div>
+        <a href="https://gateway.envoyproxy.io" class="btn">Learn More</a>
+</div>
 
-# Header 1
+## Envoy Mobile
+Envoy Mobile brings the power and consistency of Envoy Proxy to the iOS and Android platforms, providing a ubiquitous API and abstraction for mobile application networking. Running Envoy on the phone, at the edge, and within the datacenter provides unparalleled networking functionality and observability to modern distributed applications.
+<div>
+        <a href="https://envoymobile.io" class="btn">Learn More</a>
+</div>
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+## Envoy AI Gateway
+Envoy AI Gateway helps you integrate GenAI services with your applications by enabling you to handle GenAI traffic with Envoy Gateway.
+<div>
+        <a href="/ai-gateway" class="btn">Learn More</a>
+</div>
 
-## Header 2
+***
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+# History
 
-### Header 3
+**Envoy Proxy** was first created at Lyft to tackle cloud native traffic handling challenges. Later Lyft donated Envoy to the CNCF. Over it's life the Envoy Project has expanded to enable developers to further leverage and benefit from the power of Envoy Proxy.
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+**Envoy Gateway** bringing the ease of configuring and managing Envoy Proxy.
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+**Envoy Mobile** bringing the power of Envoy onto mobile devices.
 
-#### Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-![Envoy](https://raw.githubusercontent.com/cncf/artwork/fe94cfe2a3a7306b20899e43335e9a56618dc046/projects/envoy/icon/color/envoy-icon-color.svg)
-
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
+**Envoy AI Gateway** being the latest addition, allowing you to use Envoy to tackle the new era of managing GenAI integration, building upon Envoy Gateway.

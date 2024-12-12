@@ -12,19 +12,44 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
   </head>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    });
+  </script>
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
-    <header class="page-header" role="banner">
-      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      {% if site.github.is_project_page %}
-        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub you silly</a>
-      {% endif %}
-      {% if site.show_downloads %}
-        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
-      {% endif %}
+    <header class="page-nav" role="banner">
+        <div class="header-container">
+          <div class="header-logo">
+            <img src="https://raw.githubusercontent.com/cncf/artwork/fe94cfe2a3a7306b20899e43335e9a56618dc046/projects/envoy/icon/white/envoy-icon-white.png" alt="">
+          </div>
+          <!-- <nav class="main-nav">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/docs">Docs</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </nav> -->
+          <nav class="main-nav">
+            <button class="hamburger" aria-label="Toggle navigation">
+              &#9776;
+            </button>
+            <ul class="nav-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/docs">Docs</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
     </header>
 
     <main id="content" class="main-content" role="main">

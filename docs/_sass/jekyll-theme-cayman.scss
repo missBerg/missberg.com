@@ -2,7 +2,7 @@
 @import "rouge-github";
 @import "variables";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700,800');
 
 @mixin large {
   @media screen and (min-width: #{$large-breakpoint}) {
@@ -33,6 +33,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: $body-text-color;
+  height: 100%;
 }
 
 #skip-to-content {
@@ -62,21 +63,26 @@ a {
   }
 }
 
+.pink-font {
+  color:#f3c;
+}
+
 .btn {
   display: inline-block;
+  font-weight: 800;
   margin-bottom: 1rem;
-  color: rgba(255, 255, 255, 0.7);
-  background-color: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(179, 25, 171, 1);
   border-color: rgba(255, 255, 255, 0.2);
   border-style: solid;
-  border-width: 1px;
-  border-radius: 0.3rem;
-  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  border-width: 0px;
+  border-radius: 2rem;
+  transition: color 0.5s, background-color 0.5s, border-color 0.5s;
 
   &:hover {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(209, 98, 205, 0.7);
     border-color: rgba(255, 255, 255, 0.3);
   }
 
@@ -85,7 +91,8 @@ a {
   }
 
   @include large {
-    padding: 0.75rem 1rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
   }
 
   @include medium {
@@ -94,8 +101,8 @@ a {
   }
 
   @include small {
-    display: block;
-    width: 100%;
+    // display: block;
+    // width: 100%;
     padding: 0.75rem;
     font-size: 0.9rem;
 
@@ -106,56 +113,199 @@ a {
   }
 }
 
+.center-horizontal{
+  text-align: center;
+}
+
+.logos {
+  display: flex;
+  flex-wrap: wrap; // Enable wrapping
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; // Add space between items
+  padding: 1rem 1rem 2rem 1rem;
+  width: 100%; // Ensure it uses the full width of the parent
+
+  img {
+    flex: 0 1 calc(20% - 1rem); // 20% width minus gap, allows wrapping
+    max-width: 120px; // Constrain size
+    min-width: 80px; // Prevent being too small
+    height: auto; // Maintain aspect ratio
+  }
+}
+
+.page-nav {
+  background-color: $header-bg-color;
+  color: white; // Default text color
+  padding: 0.2rem 2rem; // Padding for the header
+  position: fixed; // Fix header at the top
+  top: 0;
+  left: 0;
+  width: 100%; // Full-width header
+  z-index: 1000; // Ensure it stays above other content
+
+  .header-container {
+    display: flex;
+    justify-content: space-between; // Align logo and nav on opposite sides
+    align-items: center;
+    // max-width: 1200px; // Set a max width for the container
+    margin: 0 auto; // Center the container
+  }
+
+  .header-logo {
+    img {
+      max-height: 40px; // Restrict logo size
+      width: auto; // Maintain aspect ratio
+    }
+    margin: 0.5rem 0;
+  }
+  .hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .main-nav {
+    display: flex;
+
+    ul {
+      list-style: none; // Remove bullets
+      display: flex; // Inline navigation links
+      gap: 1.5rem; // Space between list items
+      margin: 0;
+      padding: 0;
+
+      li {
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-weight: 700;
+          font-size: 1.25rem;
+          line-height: 1.75rem;
+
+          &:hover {
+            color: #f3c; // Highlight color on hover
+            text-decoration: n; // Add underline on hover
+          }
+        }
+      }
+    }
+  }
+
+  // Responsive Design
+  @include small {
+
+    .header-container {
+      // flex-direction: column; // Stack logo and nav
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .hamburger {
+      display: block; /* Show the hamburger icon */
+    }  
+
+    .main-nav {
+      display: none; /* Hide the navigation links */
+
+      ul {
+        flex-direction: column; // Stack nav links
+        align-items: left;
+        gap: 1rem; // Adjust spacing for stacked items
+      }
+    }
+
+    .main-nav.active{
+      display: flex; /* Show the menu when active */
+      padding: 1rem 0rem;
+    }
+  }
+}
+  
+
 .page-header {
   color: $header-heading-color;
-  text-align: left;
   align-items: center;
   background-color: $header-bg-color;
-  background-image: linear-gradient(145deg, $header-bg-color-secondary, $header-bg-color);
+  background-image: linear-gradient(0deg, $header-bg-color-secondary, $header-bg-color);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
   @include large {
-    padding: 5rem 6rem;
+    padding: 6rem 4rem 10rem 4rem;
   }
 
   @include medium {
-    padding: 3rem 4rem;
+    padding: 2rem 4rem;
+    clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
   }
 
   @include small {
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
   }
 
   .header-content {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    gap: $gap;
-    max-width: 84rem; // Constrain the width
-    padding: 2rem 6rem;
+    display: flex;
+    flex-direction: row; /* Logo to the right of the text */
+    align-items: start; /* Align items vertically on the same line */
+    padding: 1rem 4rem 3rem 4rem;
     margin: 0 auto;
 
-    .header-text {
-        padding: 2rem 1rem;
+    @include large {
+        max-width: 84rem; // Constrain the width
+        // min-height: 50vh;
+        gap: 2rem;
+      }
+    
+    @include medium {
+      flex-direction: column-reverse;
+      align-items: left;
+      padding: 2rem 1rem;
     }
 
+    @include small {
+      flex-direction: column-reverse;
+      align-items: left;
+      padding: 3rem 0.2rem;
+    }
 
-    @keyframes glow {
-        0%, 100% {
-          box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    .header-text {
+        padding: 2rem 0rem;
+
+        @include large {
         }
-        50% {
-          box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+      
+        @include medium {
+          padding: 0.5rem 0rem;
         }
+    
+        @include small {
+          padding: 0.5rem 0rem;
+      }
+    }
+      
+    .header-logo {
+      padding: 1rem 0rem;
+        
+      img {
+        max-width: 20vw;
+        height: auto;
+        display: block;
       }
 
-    .header-logo {
-      img {
-        max-width: $logo-max-width;
-        height: auto;
-        padding: 2rem 1rem;
-        display: block;
-        box-shadow: 0 0 15px rgb(255, 0, 208);
-        animation: glow 2s infinite; // Pulsating glow
+    //   @include large {
+    //     width: auto;
+    //   }
+    
+      @include medium {
+        padding: 0.5rem 1rem;
+      }
+    
+      @include small {
+        padding: 0.5rem 1rem; // Hide the logo on smaller screens
       }
     }
   }
@@ -163,25 +313,28 @@ a {
 
 .project-name {
   margin-top: 0;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
 
   @include large {
-    font-size: 3.25rem;
+    font-size: 5rem;
+    line-height: 0.9;
   }
 
   @include medium {
-    font-size: 2.25rem;
+    font-size: 4rem;
+    line-height: 0.9;
   }
 
   @include small {
-    font-size: 1.75rem;
+    font-size: 2rem;
+    line-height: 0.9;
   }
 }
 
 .project-tagline {
   margin-bottom: 2rem;
   font-weight: normal;
-  opacity: 0.7;
 
   @include large {
     font-size: 1.25rem;
@@ -196,11 +349,15 @@ a {
   }
 }
 
+#adopter-feature {
+  padding: 0rem 0rem 3rem 0rem;
+}
+
 .main-content {
   word-wrap: break-word;
 
   :first-child {
-    margin-top: 0;
+    margin-top: 4rem;
   }
 
   @include large {
@@ -388,9 +545,12 @@ a {
 }
 
 .site-footer {
-  padding-top: 2rem;
+  padding: 1rem;
   margin-top: 2rem;
   border-top: solid 1px $hr-border-color;
+  background-color: #e3e3e3;
+  display: flex;
+  justify-content: center;
 
   @include large {
     font-size: 1rem;
