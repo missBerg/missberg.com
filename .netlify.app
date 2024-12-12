@@ -1,0 +1,1 @@
+/netlify-site/*  https://heartfelt-elf-2a1e46.netlify.app/:splat  200
