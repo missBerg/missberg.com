@@ -3,7 +3,7 @@ layout: default
 title: Envoy Project
 is_index: true
 ---
-<div class="section-heading"><span>Open Source Tools</span></div>
+<div class="section-heading"><span>Open Source <span class="pink-font">Tools</span></span></div>
 
 {% include projects.html %}
 
