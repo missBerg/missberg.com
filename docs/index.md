@@ -7,34 +7,6 @@ is_index: true
 
 {% include projects.html %}
 
-<!-- ## Envoy Proxy
-Envoy Proxy is an edge and service proxy, designed for cloud-native applications. Providing powerful traffic management, routing, observability, and extensibility features.
-
-Take control over your traffic.
-<div>
-        <a href="https://envoyproxy.io" class="btn">Learn More</a>
-</div>
-
-## Envoy Gateway
-Envoy Gateway manages Envoy Proxy as a Standalone or Kubernetes-based API Gateway, implementing and extending the Kubernetes Gateway API.
-
-Aimed at making it easy to adopt, use, and manage Envoy Proxy.
-<div>
-        <a href="https://gateway.envoyproxy.io" class="btn">Learn More</a>
-</div>
-
-## Envoy Mobile
-Envoy Mobile brings the power and consistency of Envoy Proxy to the iOS and Android platforms, providing a ubiquitous API and abstraction for mobile application networking. Running Envoy on the phone, at the edge, and within the datacenter provides unparalleled networking functionality and observability to modern distributed applications.
-<div>
-        <a href="https://envoymobile.io" class="btn">Learn More</a>
-</div>
-
-## Envoy AI Gateway
-Envoy AI Gateway helps you integrate GenAI services with your applications by enabling you to handle GenAI traffic with Envoy Gateway.
-<div>
-        <a href="/ai-gateway" class="btn">Learn More</a>
-</div> -->
-
 ***
 
 # History
