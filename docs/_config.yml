@@ -70,9 +70,3 @@ collections:
   training:
     output: true
     permalink: /training/:name/
-
-defaults:
-  - scope:
-      path: "assets/css/"
-    values:
-      permalink: "/assets/css/:basename-:output_ext"
