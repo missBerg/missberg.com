@@ -5,7 +5,9 @@ is_index: true
 ---
 # Open Source Tools
 
-## Envoy Proxy
+{% include projects.html %}
+
+<!-- ## Envoy Proxy
 Envoy Proxy is an edge and service proxy, designed for cloud-native applications. Providing powerful traffic management, routing, observability, and extensibility features.
 
 Take control over your traffic.
@@ -31,7 +33,7 @@ Envoy Mobile brings the power and consistency of Envoy Proxy to the iOS and Andr
 Envoy AI Gateway helps you integrate GenAI services with your applications by enabling you to handle GenAI traffic with Envoy Gateway.
 <div>
         <a href="/ai-gateway" class="btn">Learn More</a>
-</div>
+</div> -->
 
 ***
 

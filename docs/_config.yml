@@ -59,3 +59,11 @@ plugins:
 #   - vendor/ruby/
 include:
   - _redirects
+
+collections:
+  adopters:
+    output: true
+    permalink: /adopters/:name/
+  projects:
+    output: true
+    permalink: /porojects/:name/
