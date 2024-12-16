@@ -1,6 +1,7 @@
 ---
-name: "Gateway"
-url: "https://gateway.envoyproxy.io"
+name: "Envoy Gateway"
+website: "https://gateway.envoyproxy.io"
+link: /projects/gateway
 ---
 Envoy Gateway manages Envoy Proxy as a Standalone or Kubernetes-based API Gateway, implementing and extending the Kubernetes Gateway API.
 

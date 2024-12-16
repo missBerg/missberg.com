@@ -1,5 +1,6 @@
 ---
-name: "AI Gateway"
-url: "https://envoyaigateway.io"
+name: "Envoy AI Gateway"
+website: "https://envoyaigateway.io"
+link: /projects/ai-gateway
 ---
 Envoy AI Gateway helps you integrate GenAI services with your applications by enabling you to handle GenAI traffic with Envoy Gateway.

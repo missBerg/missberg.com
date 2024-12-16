@@ -1,6 +1,6 @@
 ---
 name: "Envoy Proxy"
-link: "/envoy"
+link: "/projects/envoy"
 ---
 Envoy Proxy is an edge and service proxy, designed for cloud-native applications. Providing powerful traffic management, routing, observability, and extensibility features.
 

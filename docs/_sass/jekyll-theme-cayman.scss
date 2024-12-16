@@ -54,6 +54,15 @@ body {
   }
 }
 
+.section-heading {
+  font-size: 4rem;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0rem;
+  color: $section-headings-color
+}
+
 a {
   color: $body-link-color;
   text-decoration: none;
@@ -131,6 +140,29 @@ a {
     max-width: 120px; // Constrain size
     min-width: 80px; // Prevent being too small
     height: auto; // Maintain aspect ratio
+  }
+}
+.projects-grid{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+
+  .project-card {
+    border: 1px solid #ddd;
+    text-align: center;
+    width: 35rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .project-content {
+    text-align: left;
+    padding: 1rem 2rem;
   }
 }
 

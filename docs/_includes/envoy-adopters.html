@@ -1,16 +1,18 @@
-<h2>Envoy User Community</h2>
+<h2>Proxy User Community</h2>
 
 <div class="adopters-grid">
   {% for adopter in site.adopters %}
-  <div class="adopter-card">
-    <div class="adopter-name">
-        <span>{{ adopter.name }}</span>
-    </div>
-    <div class="adopter-logo">
-        <a href="{{ adopter.url }}" target="_blank">
-            <img src="/logos/adopters/{{ adopter.logo }}" alt="{{ adopter.name }}">
-          </a>
-    </div>
-  </div>
+    {% if adopter.envoy-proxy %}
+      <div class="adopter-card">
+        <div class="adopter-name">
+            <span>{{ adopter.name }}</span>
+        </div>
+        <div class="adopter-logo">
+            <a href="{{ adopter.url }}" target="_blank">
+                <img src="/logos/adopters/{{ adopter.logo }}" alt="{{ adopter.name }}">
+              </a>
+        </div>
+      </div>
+      {% endif %}
   {% endfor %}
 </div>

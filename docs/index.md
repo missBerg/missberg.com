@@ -3,13 +3,14 @@ layout: default
 title: Envoy Project
 is_index: true
 ---
-# Open Source Tools
+<div class="section-heading"><span>Open Source Tools</span></div>
 
 {% include projects.html %}
 
+
 ***
 
-# History
+<div class="section-heading"><span>History</span></div>
 
 **Envoy Proxy** was first created at Lyft to tackle cloud native traffic handling challenges. Later Lyft donated Envoy to the CNCF. Over it's life the Envoy Project has expanded to enable developers to further leverage and benefit from the power of Envoy Proxy.
 
