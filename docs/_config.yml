@@ -67,3 +67,6 @@ collections:
   projects:
     output: true
     permalink: /porojects/:name/
+  training:
+    output: true
+    permalink: /training/:name/
